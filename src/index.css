@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-linen: #F7F2E6;
+  --color-parch: #EFE8D3;
+  --color-ivory: #FDFAF2;
+  --color-grove: #2A5C3F;
+  --color-field: #3D7554;
+  --color-grass: #5C9A6F;
+  --color-sage: #8BBF9A;
+  --color-dew: #BDD9C2;
+  --color-mist: #DCF0DF;
+  --color-clay: #9E5233;
+  --color-terra: #B8694A;
+  --color-peach: #D4936E;
+  --color-sand: #E8C9A8;
+  --color-ink: #1C2B1E;
+  --color-body-text: #3A4E3C;
+  --color-mid: #637565;
+  --color-faint: #9BAD9C;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif: 'Playfair Display', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+
+  --animate-ring: ring 4s ease-in-out infinite;
+  --animate-cardfl: cardfl 8s ease-in-out infinite;
+  --animate-leafway: leafway 2s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes cardfl {
+  0%, 100% { transform: translateY(0) rotate(0.2deg); }
+  50% { transform: translateY(-10px) rotate(-0.15deg); }
+}
+
+@keyframes leafway {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@layer utilities {
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+}
+
+body {
+  @apply font-sans bg-white text-body-text overflow-x-hidden;
+}
+
+::selection {
+  @apply bg-mist text-grove;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif text-ink;
+}
+
+/* Custom button utilities */
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 py-3 px-7 text-sm font-medium rounded-full transition-all duration-300 tracking-wide cursor-pointer;
+  }
+  .btn svg {
+    @apply transition-transform duration-300;
+  }
+  .btn:hover svg {
+    @apply translate-x-1;
+  }
+  .btn-grove {
+    @apply bg-grove text-white hover:bg-clay hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(42,92,63,0.2)];
+  }
+  .btn-clay {
+    @apply bg-clay text-white hover:bg-terra hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(158,82,51,0.22)];
+  }
+  .btn-linen {
+    @apply bg-linen text-grove border-[1.5px] border-dew hover:border-sage hover:-translate-y-0.5;
+  }
+  .btn-white {
+    @apply bg-white text-grove hover:bg-mist hover:-translate-y-0.5;
+  }
+  .btn-link {
+    @apply bg-transparent text-mid py-1 px-0 rounded-none border-b border-dew hover:text-grove hover:border-sage;
+  }
+
+  .lbl {
+    @apply inline-flex items-center gap-2 text-[0.65rem] tracking-[0.2em] uppercase font-medium;
+  }
+  .lbl::before {
+    content: '';
+    @apply w-3 h-px bg-current;
+  }
+}
+
