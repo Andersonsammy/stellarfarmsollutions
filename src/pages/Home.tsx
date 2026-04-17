@@ -42,7 +42,7 @@ export default function Home() {
 
           <Reveal delay={0.3} className="relative w-full">
             <PremiumImage 
-              src="https://i.pinimg.com/originals/c5/e3/3a/c5e33a07f5b2ce59d16ce3326f649aba.jpg" 
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&auto=format&fit=crop" 
               alt="Precision soil testing on the farm"
               className="w-full h-[400px] rounded-[2rem] shadow-2xl"
               imageClassName="object-cover"
