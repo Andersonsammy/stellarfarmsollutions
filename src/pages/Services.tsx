@@ -23,11 +23,11 @@ export default function Services() {
           </div>
           
           <Reveal delay={0.2} className="w-full">
-             <PremiumImage 
-                src="src="src="https://images.unsplash.com/photo-1591086527374-5e29b5b66f82?w=1200&auto=format&fit=crop" 
-                alt="Agri expert inspecting crops" 
-                className="w-full h-[40vh] md:h-[60vh] rounded-[2rem] shadow-2xl relative border border-black/5" 
-             />
+             <img 
+  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&auto=format&fit=crop"
+  alt="Agri expert inspecting crops"
+  className="w-full h-[40vh] md:h-[60vh] rounded-[2rem] shadow-2xl object-cover"
+/>
           </Reveal>
         </div>
       </section>
