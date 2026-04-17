@@ -86,10 +86,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <Reveal w-full>
               <PremiumImage 
-                  src="/images/siol_testing.jpg" 
-                  alt="Rich soil and farming landscape in Kisii"
-                  className="w-full h-[600px] shadow-2xl rounded-[2.5rem]"
-              />
+    src="/images/siol_testing.jpg" 
+    alt="Rich soil and farming landscape in Kisii"
+    className="w-full h-[600px] shadow-2xl rounded-[2.5rem]"
+/>
             </Reveal>
             
             <Reveal delay={0.2}>
