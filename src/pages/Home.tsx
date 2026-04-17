@@ -86,7 +86,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <Reveal w-full>
               <PremiumImage 
-                  src="https://i.pinimg.com/originals/fc/70/e1/fc70e17ff8013b95e135b45bb40fa706.jpg" 
+                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&auto=format&fit=crop" 
                   alt="Rich soil and farming landscape in Kisii"
                   className="w-full h-[600px] shadow-2xl rounded-[2.5rem]"
               />
