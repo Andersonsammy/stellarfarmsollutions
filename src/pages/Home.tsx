@@ -84,11 +84,11 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <Reveal w-full>
-              <PremiumImage 
-                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&auto=format&fit=crop" 
-                  alt="Rich soil and farming landscape in Kisii"
-                  className="w-full h-[600px] shadow-2xl rounded-[2.5rem]"
-              />
+             <PremiumImage 
+    src="/images/siol_testing.jpg.jpeg" 
+    alt="Rich soil and farming landscape in Kisii"
+    className="w-full h-[600px] shadow-2xl rounded-[2.5rem]"
+/>
             </Reveal>
             
             <Reveal delay={0.2}>
