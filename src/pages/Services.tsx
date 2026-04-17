@@ -24,7 +24,7 @@ export default function Services() {
           
           <Reveal delay={0.2} className="w-full">
              <PremiumImage 
-                src="https://i.pinimg.com/originals/89/ad/f6/89adf6be9b976101c1de7df4c315c2a6.jpg" 
+                src="src="https://images.unsplash.com/photo-1591086527374-5e29b5b66f82?w=1200&auto=format&fit=crop"" 
                 alt="Agri expert inspecting crops" 
                 className="w-full h-[40vh] md:h-[60vh] rounded-[2rem] shadow-2xl relative border border-black/5" 
              />
