@@ -134,7 +134,7 @@ export default function Contact() {
                         <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">Last Name</label>
                         <input 
                           type="text" 
-                          placeholder="Otieno"
+                          placeholder="Nyaboke"
                           className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white"
                           value={formData.lastName}
                           onChange={(e) => setFormData({...formData, lastName: e.target.value})}
