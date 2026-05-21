@@ -78,7 +78,7 @@ export default function Contact() {
               <Reveal delay={0.2}>
                 <div className="flex flex-col gap-4">
                   {[
-                    { icon: <Phone className="w-5 h-5" strokeWidth={1.5} />, label: 'Phone / WhatsApp', val: '+254 700 000 000' },
+                    { icon: <Phone className="w-5 h-5" strokeWidth={1.5} />, label: 'Phone / WhatsApp', val: '+254 142 062 219' },
                     { icon: <Mail className="w-5 h-5" strokeWidth={1.5} />, label: 'Email', val: 'hello@stellarfarmsolutions.co.ke' },
                     { icon: <MapPin className="w-5 h-5" strokeWidth={1.5} />, label: 'Location', val: 'Kisii Town, Kisii County, Kenya' },
                     { icon: <Clock className="w-5 h-5" strokeWidth={1.5} />, label: 'Working Hours', val: 'Monday – Saturday, 7:00 AM – 6:00 PM' }
