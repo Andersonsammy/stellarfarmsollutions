@@ -210,7 +210,7 @@ export default function Contact() {
                     <h3 className="font-serif text-[1.6rem] font-bold text-grove mb-2.5">Message received!</h3>
                     <p className="text-[0.87rem] text-body leading-[1.75] font-light">
                       Thank you. We will get back to you within 24 hours.<br />
-                      WhatsApp us directly at <strong className="text-grove font-semibold text-[0.9em]">+254 700 000 000</strong> if you need us sooner.
+                      WhatsApp us directly at <strong className="text-grove font-semibold text-[0.9em]">+254 142 062 219</strong> if you need us sooner.
                     </p>
                     <Link to="/" className="btn btn-grove mt-8 inline-flex">
                       Back to Home
