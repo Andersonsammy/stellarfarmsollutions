@@ -146,7 +146,7 @@ export default function Contact() {
                       <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">Phone / WhatsApp *</label>
                       <input 
                         type="tel" 
-                        placeholder="+254 700 000 000"
+                        placeholder="+254 142 062 219"
                         className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
