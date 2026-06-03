@@ -81,7 +81,7 @@ export default function Contact() {
                     { icon: <Phone className="w-5 h-5" strokeWidth={1.5} />, label: 'Phone / WhatsApp', val: '+254 142 062 219' },
                     { icon: <Mail className="w-5 h-5" strokeWidth={1.5} />, label: 'Email', val: 'hello@stellarfarmsolutions.com' },
                     { icon: <MapPin className="w-5 h-5" strokeWidth={1.5} />, label: 'Location', val: 'Kisii Town, Kisii County, Kenya' },
-                    { icon: <Clock className="w-5 h-5" strokeWidth={1.5} />, label: 'Working Hours', val: 'Monday – Saturday, 7:00 AM – 6:00 PM' }
+                    { icon: <Clock className="w-5 h-5" strokeWidth={1.5} />, label: 'Working Hours', val: 'Monday – Friday, 8:00 AM – 5:00 PM' }
                   ].map((d, i) => (
                     <div key={i} className="flex gap-3.5 items-start">
                       <div className="w-9 h-9 bg-mist rounded-lg flex items-center justify-center shrink-0 text-grove">
