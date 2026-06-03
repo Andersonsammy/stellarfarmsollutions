@@ -43,9 +43,9 @@ export default function Footer() {
           <h5 className="text-[0.7rem] tracking-[0.16em] uppercase text-white/40 font-semibold mb-4">Contact</h5>
           <ul className="list-none flex flex-col gap-3">
             <li><a href="tel:+254700000000" className="text-[0.85rem] text-white/70 font-light transition-colors hover:text-white">+254 142 062 219</a></li>
-            <li><a href="mailto:hello@stellarfarmsolutions.co.ke" className="text-[0.85rem] text-white/70 font-light transition-colors hover:text-white">hello@stellar...</a></li>
+            <li><a href="mailto:hello@stellarfarmsolutions.com" className="text-[0.85rem] text-white/70 font-light transition-colors hover:text-white">hello@stellar...</a></li>
             <li><span className="text-[0.85rem] text-white/70 font-light">Kisii Town, Kenya</span></li>
-            <li><span className="text-[0.85rem] text-white/70 font-light">Mon–Sat, 7AM–6PM</span></li>
+            <li><span className="text-[0.85rem] text-white/70 font-light">Mon–Fri, 8AM–5PM</span></li>
           </ul>
         </div>
       </div>
