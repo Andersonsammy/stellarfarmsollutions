@@ -8,13 +8,14 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    phone: '',
-    location: '',
-    service: '',
-    message: ''
-  });
+  firstName: '',
+  lastName: '',
+  phone: '',
+  email: '',
+  location: '',
+  service: '',
+  message: ''
+});
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -177,6 +178,17 @@ export default function Contact() {
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       />
                     </div>
+                    <div className="mb-5">
+  <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">Email Address (optional)</label>
+  <input 
+    type="email"
+    name="email"
+    placeholder="mary@example.com"
+    className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white"
+    value={formData.email}
+    onChange={(e) => setFormData({...formData, email: e.target.value})}
+  />
+</div>
 
                     <div className="mb-5">
                       <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">Your Location</label>
