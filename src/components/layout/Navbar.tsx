@@ -27,7 +27,7 @@ export default function Navbar() {
           }`}
         >
           <Link to="/" className="flex items-center gap-3 cursor-pointer group" onClick={closeMenu}>
-           <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 transform group-hover:scale-110">
+           <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 transform group-hover:scale-110">
   <img 
     src="/logo.png" 
     alt="Stellar Farm Solutions Logo" 
