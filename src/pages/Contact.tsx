@@ -16,7 +16,7 @@ export default function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.firstName.trim()) {
       alert('Please enter your name');
@@ -27,10 +27,22 @@ export default function Contact() {
       return;
     }
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data as any).toString(),
+      });
       setIsSubmitting(false);
       setSubmitted(true);
-    }, 1500);
+    } catch (error) {
+      setIsSubmitting(false);
+      alert('Something went wrong. Please try again or contact us directly.');
+    }
   };
 
   return (
@@ -115,7 +127,17 @@ export default function Contact() {
             <Reveal delay={0.2}>
               <div className="bg-white p-11 rounded-[18px] border-[1.5px] border-dew shadow-[0_8px_30px_rgba(42,92,63,0.07)]">
                 {!submitted ? (
-                  <form onSubmit={handleSubmit}>
+                  <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
+                  >
+                    {/* Required hidden fields for Netlify */}
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="bot-field" />
+
                     <div className="font-serif text-2xl font-bold text-ink mb-1.5">Send us a message</div>
                     <div className="text-[0.8rem] text-mid mb-7 font-light">We reply within 24 hours — usually much faster.</div>
                     
@@ -123,7 +145,8 @@ export default function Contact() {
                       <div>
                         <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">First Name *</label>
                         <input 
-                          type="text" 
+                          type="text"
+                          name="firstName"
                           placeholder="Mary"
                           className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white"
                           value={formData.firstName}
@@ -133,7 +156,8 @@ export default function Contact() {
                       <div>
                         <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">Last Name</label>
                         <input 
-                          type="text" 
+                          type="text"
+                          name="lastName"
                           placeholder="Nyaboke"
                           className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white"
                           value={formData.lastName}
@@ -145,7 +169,8 @@ export default function Contact() {
                     <div className="mb-5">
                       <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">Phone / WhatsApp *</label>
                       <input 
-                        type="tel" 
+                        type="tel"
+                        name="phone"
                         placeholder="+254 142 062 219"
                         className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white"
                         value={formData.phone}
@@ -156,7 +181,8 @@ export default function Contact() {
                     <div className="mb-5">
                       <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">Your Location</label>
                       <input 
-                        type="text" 
+                        type="text"
+                        name="location"
                         placeholder="e.g. Nyamira, Kisii"
                         className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white"
                         value={formData.location}
@@ -167,6 +193,7 @@ export default function Contact() {
                     <div className="mb-5">
                       <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">What can we help with?</label>
                       <select 
+                        name="service"
                         className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white cursor-pointer appearance-none"
                         value={formData.service}
                         onChange={(e) => setFormData({...formData, service: e.target.value})}
@@ -185,6 +212,7 @@ export default function Contact() {
                     <div className="mb-5">
                       <label className="block text-[0.63rem] tracking-[0.1em] uppercase text-body font-medium mb-1.5">Tell us about your farm</label>
                       <textarea 
+                        name="message"
                         placeholder="What do you grow? How many acres? Any specific challenges?"
                         className="w-full py-3 px-4 bg-linen border-[1.5px] border-dew rounded-lg text-[0.87rem] text-ink outline-none transition-colors duration-200 focus:border-sage focus:bg-white resize-none h-[100px] leading-[1.6]"
                         value={formData.message}
