@@ -7,9 +7,13 @@ export default function Footer() {
       <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 pb-12 border-b border-white/10">
         <div>
           <Link to="/" className="flex items-center gap-3 cursor-pointer group">
-            <div className="w-8 h-8 bg-sage rounded-full flex items-center justify-center transition-colors group-hover:bg-white text-grove">
-              <Sprout className="w-4 h-4" strokeWidth={2} />
-            </div>
+            <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 transform group-hover:scale-110">
+  <img 
+    src="/logo.png" 
+    alt="Stellar Farm Solutions Logo" 
+    className="w-full h-full object-contain"
+  />
+</div>
             <div>
               <div className="font-serif text-[1.1rem] font-bold text-white transition-colors">Stellar Farm Solutions</div>
               <span className="text-[0.6rem] text-white/50 tracking-[0.16em] uppercase font-sans block font-light">Kisii Region · Kenya</span>
