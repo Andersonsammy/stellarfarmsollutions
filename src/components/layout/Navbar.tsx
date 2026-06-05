@@ -27,9 +27,13 @@ export default function Navbar() {
           }`}
         >
           <Link to="/" className="flex items-center gap-3 cursor-pointer group" onClick={closeMenu}>
-            <div className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-500 transform group-hover:rotate-12 group-hover:scale-110 bg-grove text-white group-hover:bg-clay`}>
-              <Sprout className="w-4 h-4" strokeWidth={2} />
-            </div>
+            <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 transform group-hover:scale-110">
+  <img 
+    src="/images/aa logo.png" 
+    alt="Stellar Farm Solutions Logo" 
+    className="w-full h-full object-contain"
+  />
+</div>
             <div className={`font-serif text-[1.1rem] font-bold leading-tight hidden sm:block transition-colors duration-500 tracking-wide text-ink group-hover:text-clay`}>
               Stellar
             </div>
